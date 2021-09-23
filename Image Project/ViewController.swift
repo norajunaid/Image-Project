@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var catImage: UIImageView!
-    @IBOutlet weak var catImage2: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func displayButton(_ sender: UIButton) {
+        if messageLabel.text=="Where are my cats?" {
         messageLabel.text = "Hello There"
-        catImage.image=UIImage(named: "Cat")
-        catImage2.image=UIImage(named: "Cat2")
+            catImage.image=UIImage(named: "Cat")
+            
+        }
+        
+        else{
+            messageLabel.text="We need more cats"}
+       
     }
     
 }
